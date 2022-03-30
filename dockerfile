@@ -1,8 +1,6 @@
-FROM ubuntu
-ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update
-RUN apt-get install apache2 -y
-RUN apt-get install apache2-utils -y
-RUN apt-get clean
-EXPOSE 80
-CMD ["apache2ctl","-D","FOREGROUND"]
+FROM python:3.8
+ADD main.py .
+RUN pip install requests beautifulsoup4
+CMD ["python", "/main.py"]
+
+
