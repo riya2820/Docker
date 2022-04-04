@@ -9,4 +9,6 @@ COPY . .
 
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
 
+#command for URLs:
+#ENTRYPOINT ["python3", "main.py"] 
 
